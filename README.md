@@ -175,21 +175,20 @@ Export options:
 ```mermaid
 flowchart LR
 
-A[Student Input] 
---> B[Chat Context Memory]
---> C[Groq LLM Response Engine]
---> D[Primary Answer v1]
+A[Student input] --> B[Chat context memory]
+B --> C[LLM response engine]
+C --> D[Primary answer v1]
 
-D --> E{Refinement Trigger?}
-E -->|Simpler| F[Refinement v2 — Simplified]
-E -->|Examples| G[Refinement v2 — Example-Based]
+D --> E{Refinement trigger}
+E -->|Simpler| F[Refinement simple v2]
+E -->|Examples| G[Refinement example v2]
 
-F --> H[Chat History]
-G --> H[Chat History]
+F --> H[Chat history]
+G --> H
 
-H --> I[Meta Log Store (JSON)]
-I --> J[Analytics Engine]
-J --> K[Reflection Summary Export]
+H --> I["Meta Log Store JSON"]
+I --> J["Analytics Engine"]
+J --> K["Reflection Summary Export"]
 ```
 
 The system treats each doubt as a **learning event**.
@@ -295,4 +294,5 @@ This system is built as a **learning facilitator — not a shortcut answer tool*
 
 **Sushant Adhav**
 CSRBOX — IBM SkillsBuild Applied AI Internship (2025)
+
 
