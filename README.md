@@ -4,21 +4,21 @@
 
 An AI-powered conceptual learning assistant that helps students bridge learning gaps through:
 
-* Bloom learning levels
+* Bloom Learning Levels
 * Progressive refinement explanations
 * Confidence-based reflection
 * Revision-priority insights
 * Structured learning summaries
 * Lightweight learning analytics dashboard
 
-Instead of only answering questions, the assistant supports:
+Instead of only *answering questions*, the assistant supports:
 
 ✔ understanding  
 ✔ reflection  
 ✔ progressive clarity  
 ✔ learning reinforcement  
 
-This project aligns with SDG-4 Quality Education by enabling reflective, feedback-driven learning.
+This project aligns with **SDG-4 — Quality Education** by enabling reflective, feedback-driven learning.
 
 ---
 
@@ -34,7 +34,7 @@ Traditional AI chat responses provide answers — but they do not:
 
 This system shifts AI from:
 
-"Answer provider" → "Learning facilitator"
+> “Answer provider” → “Learning facilitator”
 
 by encouraging:
 
@@ -47,23 +47,22 @@ by encouraging:
 
 # 🧩 Visual Learning Flow
 
-### How a Learning Session Works
+### **How a Learning Session Works**
 
 ```mermaid
 flowchart TD
 
-A["Student asks question"] --> B["AI main explanation v1"]
-B --> C{"Student feedback"}
+A[Student asks question] --> B[AI main explanation v1]
+B --> C{Student feedback}
 
-C -->|"Needs simpler form"| D["Refinement v2 - simpler explanation"]
-C -->|"Needs more examples"| E["Refinement v2 - example based"]
-C -->|"Understood"| F["Confidence recorded"]
+C -->|Needs simpler form| D[Refinement simple explanation v2]
+C -->|Needs more examples| E[Refinement example based v2]
+C -->|Understood| F[Confidence recorded]
 
-D --> G["Confidence check"]
+D --> G[Confidence check]
 E --> G
 
-G --> H["Confidence trend logged"]
-H --> I["Revision priority evaluated"]
-
-I --> J["Learning analytics dashboard"]
-J --> K["Reflection based learning summary export"]
+G --> H[Confidence trend logged]
+H --> I[Revision priority evaluated]
+I --> J[Learning analytics dashboard]
+J --> K[Reflection learning summary export]
