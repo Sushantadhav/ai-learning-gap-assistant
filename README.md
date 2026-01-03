@@ -173,22 +173,29 @@ Export options:
 # 🏗 System Architecture Flow
 
 ```mermaid
-flowchart LR
+flowchart TB
 
-A[Student input] --> B[Chat context memory]
-B --> C[LLM response engine]
-C --> D[Primary answer v1]
+A[Student Input]
+    --> B[Context Memory]
 
-D --> E{Refinement trigger}
-E -->|Simpler| F[Refinement simple v2]
-E -->|Examples| G[Refinement example v2]
+B --> C[Prompt Composer]
 
-F --> H[Chat history]
+C --> D[LLM Response Engine]
+
+D --> E{Refinement Requested?}
+
+E -->|Simpler| F[Refinement v2 - Simplified]
+E -->|Examples| G[Refinement v2 - Example Based]
+
+F --> H[Conversation History]
 G --> H
 
-H --> I["Meta Log Store JSON"]
-I --> J["Analytics Engine"]
-J --> K["Reflection Summary Export"]
+H --> I["Session Log Store - JSON"]
+
+I --> J["Learning Analytics Engine"]
+
+J --> K["Reflection Summary Generator"]
+
 ```
 
 The system treats each doubt as a **learning event**.
@@ -294,6 +301,7 @@ This system is built as a **learning facilitator — not a shortcut answer tool*
 
 **Sushant Adhav**
 CSRBOX — IBM SkillsBuild Applied AI Internship (2025)
+
 
 
 
