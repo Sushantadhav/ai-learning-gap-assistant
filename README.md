@@ -50,22 +50,22 @@ by encouraging:
 ### **How a Learning Session Works**
 
 ```mermaid
-flowchart LR
+flowchart TD
 
-A[Student input] --> B[Chat context memory]
-B --> C[LLM response engine]
-C --> D[Primary answer v1]
+A[Student asks question] --> B[AI main explanation v1]
+B --> C{Student feedback}
 
-D --> E{Refinement trigger}
-E -->|Simpler| F[Refinement simple v2]
-E -->|Examples| G[Refinement example v2]
+C -->|Needs simpler form| D[Refinement simple explanation v2]
+C -->|Needs more examples| E[Refinement example based v2]
+C -->|Understood| F[Confidence recorded]
 
-F --> H[Chat history]
-G --> H
+D --> G[Confidence check]
+E --> G
 
-H --> I["Meta Log Store JSON"]
-I --> J["Analytics Engine"]
-J --> K["Reflection Summary Export"]
+G --> H[Confidence trend logged]
+H --> I[Revision priority evaluated]
+I --> J[Learning analytics dashboard]
+J --> K[Reflection learning summary export]
 ```
 
 The system treats learning as a **process**, not a single response.
@@ -294,5 +294,6 @@ This system is built as a **learning facilitator — not a shortcut answer tool*
 
 **Sushant Adhav**
 CSRBOX — IBM SkillsBuild Applied AI Internship (2025)
+
 
 
