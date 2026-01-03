@@ -53,19 +53,19 @@ by encouraging:
 flowchart LR
 
 A[Student input] --> B[Chat context memory]
-B --> C[Prompt composer]
+B --> C[LLM response engine]
 C --> D[Primary answer v1]
 
 D --> E{Refinement trigger}
-E -->|Simpler| F[Refinement v2 simple]
-E -->|Examples| G[Refinement v2 example]
+E -->|Simpler| F[Refinement simple v2]
+E -->|Examples| G[Refinement example v2]
 
 F --> H[Chat history]
 G --> H
 
-H --> I[Meta log store JSON]
-I --> J[Analytics engine]
-J --> K[Reflection summary export]
+H --> I["Meta Log Store JSON"]
+I --> J["Analytics Engine"]
+J --> K["Reflection Summary Export"]
 ```
 
 The system treats learning as a **process**, not a single response.
@@ -295,3 +295,4 @@ This system is built as a **learning facilitator — not a shortcut answer tool*
 
 **Sushant Adhav**
 CSRBOX — IBM SkillsBuild Applied AI Internship (2025)
+
